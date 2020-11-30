@@ -1,3 +1,3 @@
 class Amenity < ApplicationRecord
-  belongs_to :neighborhood_amenity
+  has_many :neighborhood_amenities, dependent: :destroy
 end

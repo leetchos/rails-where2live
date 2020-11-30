@@ -1,4 +1,4 @@
 class Neighborhood < ApplicationRecord
-  has_many :cities
-  has_many :neighborhood_amenities
+  belongs_to :city
+  has_many :neighborhood_amenities, dependent: :destroy
 end

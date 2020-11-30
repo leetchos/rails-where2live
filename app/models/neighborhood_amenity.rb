@@ -1,4 +1,4 @@
 class NeighborhoodAmenity < ApplicationRecord
-  has_many :amenities
+  belongs_to :amenity
   belongs_to :neighborhood
 end
