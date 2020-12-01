@@ -1,1 +1,74 @@
 // Specific CSS for your home-page
+.navbar-lewagon {
+  display: none;
+}
+
+.hr-1 {
+  border-top: 10px solid #29ABE2;
+  margin-top: 0px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 50px;
+}
+
+.logo {
+  width: 11rem;
+  padding: 0 0 10px 0;
+  align-self: center;
+}
+
+h1 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  color: #5c5d5f;
+  margin: 10px 0;
+  text-align: center;
+}
+
+.hr-2 {
+  border: 1px solid #e3e3e3;
+  width: 100%;
+}
+
+.btn-primary {
+  flex-grow: 4;
+  weight: 100px;
+}
+
+h2 {
+  font-size: 14px;
+  font-weight: 600;
+  color: #29ABE2;
+  align-self: center;
+}
+
+.forgot-password {
+  padding-top: 20px;
+}
+
+.btn-social {
+  border: 1px solid #29ABE2;
+  color: #29ABE2;
+  background-color: white;
+  font-weight: 500;
+  padding: 8px 0;
+  margin-bottom: 15px;
+}
+
+.sign-up {
+  display: flex;
+  flex-direction: column;
+  padding-top: 15%;
+}
+
+h3 {
+  font-size: 14px;
+  font-weight: 600;
+  color: #adadad;
+  align-self: center;
+}
+
