@@ -1,6 +1,6 @@
 Review.destroy_all
 User.destroy_all
-user = User.create!(email:"test@test.com", password: "123456")
+# user = User.create!(email:"test@test.com", password: "123456")
 
 # name = ["Raphael Costa", "Mark Lee", "Eros Magno", "Nicolas Enne", "Raphaeros Markolas", "Alanis Morissette"]
 
