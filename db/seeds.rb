@@ -31,19 +31,16 @@ neighborhoods = ["Vila Mariana",
 amenities = [{ school: rand(0..5) },
             { gym: rand(0..5) },
             { hospital: rand(0..5) },
-            { grocery: rand(0..5) },
+            { supermarket: rand(0..5) },
             { restaurant: rand(0..5) },
-            { bike_friendly: rand(0..5) },
-            { desabled_friendly: rand(0..5) },
-            { subway_station: rand(0..5) },
-            { bus_stop: rand(0..5) },
-            { pet_friendly: rand(0..5) }]
+            { mobility: rand(0..5) }]
+
 
 neighborhoods.each do |neighborhood|
 n = Neighborhood.create!(name: neighborhood)
 rand(1..4).times do
 amenity = amenities.sample
-# digamos que o sample fosse {bar: 5} 
+# digamos que o sample fosse {bar: 5}
 bairro[amenity.keys.first] = ameninty.values
 # seria como bairro[:bar] = 5
 end
