@@ -18,9 +18,6 @@ class NeighborhoodsController < ApplicationController
     @neighborhood = Neighborhood.find(params[:id])
   end
 
-  def profile
-  end
-
-  def choice
+  def new
   end
 end
