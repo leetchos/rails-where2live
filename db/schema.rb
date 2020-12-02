@@ -10,10 +10,50 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_11_30_161151) do
+ActiveRecord::Schema.define(version: 2020_11_30_193839) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "amenities", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "cities", force: :cascade do |t|
+    t.string "name"
+    t.string "state"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "neighborhood_amenities", force: :cascade do |t|
+    t.bigint "amenity_id"
+    t.bigint "neighborhood_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["amenity_id"], name: "index_neighborhood_amenities_on_amenity_id"
+    t.index ["neighborhood_id"], name: "index_neighborhood_amenities_on_neighborhood_id"
+  end
+
+  create_table "neighborhoods", force: :cascade do |t|
+    t.text "description"
+    t.bigint "city_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["city_id"], name: "index_neighborhoods_on_city_id"
+  end
+
+  create_table "reviews", force: :cascade do |t|
+    t.string "content"
+    t.bigint "user_id"
+    t.bigint "neighborhood_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["neighborhood_id"], name: "index_reviews_on_neighborhood_id"
+    t.index ["user_id"], name: "index_reviews_on_user_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -27,4 +67,9 @@ ActiveRecord::Schema.define(version: 2020_11_30_161151) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "neighborhood_amenities", "amenities"
+  add_foreign_key "neighborhood_amenities", "neighborhoods"
+  add_foreign_key "neighborhoods", "cities"
+  add_foreign_key "reviews", "neighborhoods"
+  add_foreign_key "reviews", "users"
 end
