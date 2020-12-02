@@ -1,13 +1,74 @@
 Review.destroy_all
 User.destroy_all
-user = User.create!(email:"test@test.com", password: "123456")
+# user = User.create!(email:"test@test.com", password: "123456")
+
+# name = ["Raphael Costa", "Mark Lee", "Eros Magno", "Nicolas Enne", "Raphaeros Markolas", "Alanis Morissette"]
 
 user1=User.create!(user: user, name: "Eros Magno")
 user2=User.create!(user: user, name: "Raphael Costa")
 user3=User.create!(user: user, name: "Mark Lee")
-user4=User.create!(user: user, name: "Nicolas Ambar")
+user4=User.create!(user: user, name: "Nicolas Enne")
 user5=User.create!(user: user, name: "Raphaeros Markolas")
 user6=User.create!(user: user, name: "Alanis Morissette")
+
+
+neighborhoods = ["Vila Mariana",
+                  "Jardins",
+                  "Ipiranga",
+                  "Butantã",
+                  "Chácara Klabin",
+                  "Santana",
+                  "Tatuapé",
+                  "Santa Cecília",
+                  "Moema",
+                  "Jabaquara",
+                  "Mooca",
+                  "Lapa",
+                  "Vila Madalena",
+                  "Bela Vista",
+                  "Paraíso"]
+
+amenities = [{ school: rand(0..5) },
+            { gym: rand(0..5) },
+            { hospital: rand(0..5) },
+            { grocery: rand(0..5) },
+            { restaurant: rand(0..5) },
+            { bike_friendly: rand(0..5) },
+            { desabled_friendly: rand(0..5) },
+            { subway_station: rand(0..5) },
+            { bus_stop: rand(0..5) },
+            { pet_friendly: rand(0..5) }]
+
+neighborhoods.each do |neighborhood|
+n = Neighborhood.create!(name: neighborhood)
+rand(1..4).times do
+amenity = amenities.sample
+# digamos que o sample fosse {bar: 5} 
+bairro[amenity.keys.first] = ameninty.values
+# seria como bairro[:bar] = 5
+end
+end
+
+# puts "Cleaning database..."
+# Restaurant.destroy_all
+
+# puts "Creating restaurants..."
+# dishoom = { name: "Dishoom", address: "7 Boundary St, London E2 7JE", stars: 5 }
+# pizza_east =  { name: "Pizza East", address: "56A Shoreditch High St, London E1 6PQ", stars: 4 }
+
+# [ dishoom, pizza_east ].each do |attributes|
+#   restaurant = Restaurant.create!(attributes)
+#   puts "Created #{restaurant.name}"
+# end
+# puts "Finished!"
+
+
+
+# Bairro.create!({
+#   name: "Le Dindon en Laisse",
+#   address: "18 Rue Beautreillis, 75004 Paris, France"
+# })
+
 
 # image1=URI.open("https://res.cloudinary.com/nicolasenne/image/upload/v1606176917/find-your-plants/plant-1_t4zlk1.png")
 # image2=URI.open("https://res.cloudinary.com/nicolasenne/image/upload/v1606176917/find-your-plants/plant-2_zku4ke.png")
