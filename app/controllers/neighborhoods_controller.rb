@@ -17,4 +17,10 @@ class NeighborhoodsController < ApplicationController
   def show
     @neighborhood = Neighborhood.find(params[:id])
   end
+
+  def profile
+  end
+
+  def choice
+  end
 end
