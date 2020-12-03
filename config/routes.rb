@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  get 'reviews/show'
   devise_for :users
   root to: 'pages#home'
   resources :neighborhoods, only: [:index, :show]
