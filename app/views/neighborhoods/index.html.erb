@@ -11,6 +11,15 @@
       <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="ex: Vila Madalena">
     </div>
 
+    <% @neighborhoods.each do |neighborhood| %>
+    <ul>
+    <li>
+      <%= link_to neighborhood.name, neighborhood_path(neighborhood) %>
+    </li>
+
+    </ul>
+    <% end %>
+
   <button type="submit" class="btn btn-primary w-100" id="btn-amenities">Achar meu novo lar!</button>
-  <%= link_to "Inscreva-se", new_user_session_path, class: 'h2' %>
+
 </div>
