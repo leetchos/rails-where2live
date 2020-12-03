@@ -5,15 +5,25 @@
       <%= cl_image_tag current_user.photo, class: "avatar" %>
     </div>
 </div>
+<div class="text-center">
+  <img src="..." class="rounded" alt="...">
+  <img src="..." class="rounded mx-auto d-block" alt="...">
+</div>
+
   
 
 <div class= "container">
     <h1> where2live </h1>
-    <p> make your choice better to live </p>
-    <div class = "">
+    <!-- <p> make your choice better to live </p> -->
+    <!-- <div class = "">
         <div class="row">you have 0 messages</div>
         <div class="row">Edit profile</div>
         <div class="row">configuration</div>
         <div class="row">Sign out</div>
-    </div>
+    </div> -->
+    <%= link_to   "You have 0 messages", "#", class: "btn btn-ghost border-bottom" %>
+    <%= link_to "Edit profile", "#", class: "btn btn-flat border-bottom" %>
+    <%= link_to "Configuration", "#", class: "btn btn-gradient border-bottom" %>
+    <%= link_to "sign out", "#", class: "btn btn-flat border-bottom" %>
+    
 </div>
