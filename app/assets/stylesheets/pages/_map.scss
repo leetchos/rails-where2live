@@ -1,0 +1,34 @@
+.search-form-control {
+  position: relative;
+  z-index: 10;
+}
+
+.search-form-control .btn {
+  position: absolute;
+  top: 8px;
+  bottom: 8px;
+}
+
+.search-form-control .form-control {
+  height: 3.5rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  border: 1px solid #E7E7E7;
+}
+
+.search-text {
+  position: absolute;
+  color: #a5a5a5;
+  top: 15px;
+  left: 12px;
+}
+
+.fa-search {
+  color: #29ABE2;
+}
+
+.map {
+  weight: 100vw;
+  height: 100vh;
+  position: absolute;
+}
+
