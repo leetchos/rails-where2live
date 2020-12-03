@@ -43,7 +43,7 @@ neighborhoods.each do |neighborhood|
 n = Neighborhood.create!(name: neighborhood)
 rand(1..4).times do
 amenity = amenities.sample
-# digamos que o sample fosse {bar: 5} 
+# digamos que o sample fosse {bar: 5}
 bairro[amenity.keys.first] = ameninty.values
 # seria como bairro[:bar] = 5
 end
