@@ -1,12 +1,6 @@
 class AmenitiesController < ApplicationController
   def index
 
-      # unless choice1.nil?
-      # choice1 = "#{choice1} > 5"
-      # choice2 = choice2.nil? ? "" : " AND #{choice2} > 5"
-      # choice3 = choice3.nil? ? "" : " AND #{choice3} > 5"
-      # Neighborhood.where("#{choice1}#{choice2}#{choice3}")
-    # end
   end
 
   # 1 receber params com array das escolhas

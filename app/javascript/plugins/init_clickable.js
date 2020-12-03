@@ -22,7 +22,7 @@ const clickableAmenity = () => {
       let relativePath = "/neighborhoods?amenities="
       const amenities = []
       selectedAmenities.forEach((amenity) => amenities.push(amenity.dataset.amenity))
-      window.location.replace(relativePath + amenities.join(","))
+      window.location.replace(relativePath + amenities.join(","));
     });
   }
 };
