@@ -17,3 +17,4 @@ class NeighborhoodsController < ApplicationController
     @neighborhood = Neighborhood.find(params[:id])
   end
 end
+
