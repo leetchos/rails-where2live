@@ -1,5 +1,6 @@
 class NeighborhoodsController < ApplicationController
   def index
+    amenities = params[:amenities].split(',')
   end
 
   def show
