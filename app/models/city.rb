@@ -1,3 +1,3 @@
 class City < ApplicationRecord
-  belongs_to :neighborhood
+  has_many :neighborhoods
 end

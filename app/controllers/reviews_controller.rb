@@ -1,4 +1,7 @@
 class ReviewsController < ApplicationController
+  def index
+  end
+
   def create
     @neighborhood = Neighborhood.find(params[:neighborhood_id])
     @review = Review.new(review_params)
