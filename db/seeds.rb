@@ -4,13 +4,14 @@ User.destroy_all
 
 # name = ["Raphael Costa", "Mark Lee", "Eros Magno", "Nicolas Enne", "Raphaeros Markolas", "Alanis Morissette"]
 
-user1=User.create!(user: user, name: "Eros Magno")
-user2=User.create!(user: user, name: "Raphael Costa")
-user3=User.create!(user: user, name: "Mark Lee")
-user4=User.create!(user: user, name: "Nicolas Enne")
-user5=User.create!(user: user, name: "Raphaeros Markolas")
-user6=User.create!(user: user, name: "Alanis Morissette")
+user1=User.create!(email: 't1@t.com', password: 123456)
+user2=User.create!(email: 't2@t.com', password: 123456)
+user3=User.create!(email: 't3@t.com', password: 123456)
+user4=User.create!(email: 't4@t.com', password: 123456)
+user5=User.create!(email: 't5@t.com', password: 123456)
+user6=User.create!(email: 't6@t.com', password: 123456)
 
+city = City.create!(name: "sao paulo", state: "SP")
 
 neighborhoods = ["Vila Mariana",
                   "Jardins",
@@ -31,22 +32,24 @@ neighborhoods = ["Vila Mariana",
 amenities = [{ school: rand(0..5) },
             { gym: rand(0..5) },
             { hospital: rand(0..5) },
-            { grocery: rand(0..5) },
+            { supermarket: rand(0..5) },
             { restaurant: rand(0..5) },
-            { bike_friendly: rand(0..5) },
-            { desabled_friendly: rand(0..5) },
-            { subway_station: rand(0..5) },
-            { bus_stop: rand(0..5) },
-            { pet_friendly: rand(0..5) }]
+            { mobility: rand(0..5) }]
+
+
+["school","gym","hospital","supermarket","restaurant","mobility"].each do |amenity|
+  Amenity.create!(name: amenity)
+end
 
 neighborhoods.each do |neighborhood|
-n = Neighborhood.create!(name: neighborhood)
-rand(1..4).times do
-amenity = amenities.sample
-# digamos que o sample fosse {bar: 5}
-bairro[amenity.keys.first] = ameninty.values
-# seria como bairro[:bar] = 5
-end
+  n = Neighborhood.create!(description: neighborhood, city: city)
+  rand(15..20).times do
+    amenity = Amenity.all.sample
+    NeighborhoodAmenity.create!(neighborhood: n, amenity: amenity)
+    # digamos que o sample fosse {bar: 5}
+    # bairro[amenity.keys.first] = ameninty.values
+    # seria como bairro[:bar] = 5
+  end
 end
 
 # puts "Cleaning database..."
