@@ -38,7 +38,7 @@ ActiveRecord::Schema.define(version: 2020_11_30_193839) do
   end
 
   create_table "neighborhoods", force: :cascade do |t|
-    t.text "description"
+    t.string "name"
     t.bigint "city_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
