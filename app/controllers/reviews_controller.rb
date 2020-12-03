@@ -1,8 +1,7 @@
 class ReviewsController < ApplicationController
-  def show
+  def index
   end
 
-  class ReviewsController < ApplicationController
   def create
     @neighborhood = Neighborhood.find(params[:neighborhood_id])
     @review = Review.new(review_params)
@@ -20,6 +19,4 @@ class ReviewsController < ApplicationController
   def review_params
     params.require(:review).permit(:rating, :content)
   end
-end
-
 end
