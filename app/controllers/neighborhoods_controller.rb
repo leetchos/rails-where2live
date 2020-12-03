@@ -6,6 +6,7 @@ class NeighborhoodsController < ApplicationController
       # choice2 = choice2.nil? ? "" : " AND #{choice2} > 5"
       # choice3 = choice3.nil? ? "" : " AND #{choice3} > 5"
       # Neighborhood.where("#{choice1}#{choice2}#{choice3}")
+      @neighborhoods = Neighborhood.all
   end
 
   def show

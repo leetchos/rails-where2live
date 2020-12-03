@@ -12,7 +12,12 @@
     </div>
 
     <% @neighborhoods.each do |neighborhood| %>
-      <h2>neighborhood.name</h2>
+    <ul>
+    <li><%= neighborhood.name %>
+      <%= link_to "Explore", neighborhood_path(neighborhood) %>
+    </li>
+
+    </ul>
     <% end %>
 
   <button type="submit" class="btn btn-primary w-100" id="btn-amenities">Achar meu novo lar!</button>
