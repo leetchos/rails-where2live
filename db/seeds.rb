@@ -36,6 +36,7 @@ amenities = [{ school: rand(0..5) },
             { restaurant: rand(0..5) },
             { mobility: rand(0..5) }]
 
+
 ["school","gym","hospital","supermarket","restaurant","mobility"].each do |amenity|
   Amenity.create!(name: amenity)
 end
