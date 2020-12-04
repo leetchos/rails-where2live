@@ -1,1 +1,36 @@
-<h1>Bairro selecionado</h1>
+
+
+<h1> <%= @neighborhood.name %> </h1>
+
+
+<form novalidate="novalidate" class="simple_form search" action="/" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="&#x2713;" />
+  <div class="search-form-control">
+    <input class="form-control form-control-sm" type="text" placeholder="🔎  Pesquise por cidade, bairro ou rua"
+        aria-label="Search">
+    <!-- <button name="button" type="submit" class="btn btn-flat"> -->
+    </button>
+  </div>
+</form>
+
+
+<iframe class="map"
+  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.4597063648766!2d-46.69166298516604!3d-23.551927567128796!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce57bc5392ac8f%3A0x39c0e547e7b82d85!2sLe%20Wagon%20S%C3%A3o%20Paulo%20Coding%20Bootcamp!5e0!3m2!1sen!2sbr!4v1607026224348!5m2!1sen!2sbr"
+  width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen=""
+  aria-hidden="false" tabindex="0">
+</iframe>
+
+<%= render 'shared/navbar' %>
+
+
+<!-- <iframe
+  width="600"
+  height="450"
+  frameborder="0" style="border:0"
+  src="https://www.google.com/maps/embed/v1/search?key=ENV[GOOGLE_API_SERVER_KEY]&origin=Sao+Paulo+SP+Brasil" allowfullscreen>
+
+</iframe>
+55bd1b694231bc5f87654892f629083b2378288b
+
+</iframe> -->
+
+

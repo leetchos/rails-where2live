@@ -42,7 +42,7 @@ amenities = [{ school: rand(0..5) },
 end
 
 neighborhoods.each do |neighborhood|
-  n = Neighborhood.create!(description: neighborhood, city: city)
+  n = Neighborhood.create!(name: neighborhood, city: city)
   rand(15..20).times do
     amenity = Amenity.all.sample
     NeighborhoodAmenity.create!(neighborhood: n, amenity: amenity)

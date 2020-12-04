@@ -12,6 +12,6 @@ class AmenitiesController < ApplicationController
   private
 
   def amenity_params
-    params.require(:amenity).permit(:gym, :hospital, :school, :supermarket, :restaurant, :mobility)
+    params.require(:amenity).permit(:name)
   end
 end
