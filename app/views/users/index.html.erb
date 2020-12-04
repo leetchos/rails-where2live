@@ -16,20 +16,33 @@
     <h1> where2live </h1>
     <!-- <p> make your choice better to live </p> -->
     <!-- <div class = "">
-        <div class="row">you have 0 messages</div>
+        <div class="row"> <p> you have 0 messages </p> </div>
         <div class="row">Edit profile</div>
         <div class="row">configuration</div>
         <div class="row">Sign out</div>
     </div> -->
-    <%= link_to   "You have 0 messages", "#", class: "btn btn-ghost border-bottom" %>
-    <%= link_to "Edit profile", "#", class: "btn btn-flat border-bottom" %>
-    <%= link_to "Configuration", "#", class: "btn btn-gradient border-bottom" %>
-    <%= link_to "sign out", "#", class: "btn btn-flat border-bottom" %>
-<<<<<<< HEAD
+    <%= link_to root_path, class: "btn btn-ghost border-bottom" do %>
+      <i class="far fa-comment-alt"></i> You have 0 messages
+     <% end %> 
+     <%= link_to root_path, class: "btn btn-ghost border-bottom" do %>
+      <i class="fas fa-pencil-alt"></i>  Edit profile
+     <% end %>
+     <%= link_to root_path, class: "btn btn-ghost border-bottom" do %>
+      <i class="far fa-star"></i> Add your review
+     <% end %>
+     <%= link_to root_path, class: "btn btn-ghost border-bottom" do %>
+      <i class="fas fa-wrench"></i> Configuration
+     <% end %>
+     <%= link_to root_path, class: "btn btn-ghost border-bottom" do %>
+      <i class="fas fa-sign-out-alt"></i> Sign out
+     <% end %> 
+    <%#= link_to   "You have 0 messages", "#", class: "btn btn-ghost border-bottom" %>
+    <%#= link_to "Edit profile", "#", class: "btn btn-flat border-bottom" %>
+    <%#= link_to "Configuration", "#", class: "btn btn-gradient border-bottom" %>
+    <%#= link_to "sign out", "#", class: "btn btn-flat border-bottom" %>
+
     
 </div>
 <%= render 'shared/navbar' %>
-=======
 
 </div>
->>>>>>> 8fcc1cad7c8a2f438475dc608a252abac7183a40
