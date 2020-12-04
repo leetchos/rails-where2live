@@ -1,5 +1,4 @@
-<h1>Bairro selecionado</h1>
-
+<h1><%= @neighborhood.name %></h1>
 
 <%# The Maps Embed API lets you place an interactive map, or Street View panorama on your site with a simple HTTP request. It can be easily embedded in your web page or blog by setting the Maps Embed API URL as the src attribute of an iframe: %>
 
@@ -7,7 +6,9 @@
   width="600"
   height="450"
   frameborder="0" style="border:0"
-  src="https://www.google.com/maps/embed/v1/search?keyTeotjCE0qQKQ&q=Sao+Paulo+SP+Brasil" allowfullscreen>
+  src="https://www.google.com/maps/embed/v1/search?key=<%= ENV["GOOGLE_API_SERVER_KEY"] %>&q=school+hospital+gym+in+Vila+Mariana" allowfullscreen>
 </iframe>
+
+<%# src={`https://www.google.com/maps/embed/v1/${mode}?key=${apiKey}&q=${encodedAddressQuery}`} %>
 
 
