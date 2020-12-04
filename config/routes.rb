@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
   devise_for :users
   root to: 'pages#home'
-  resources :neighborhoods, only: [:index, :show]
+  resources :neighborhoods, only: [:index, :show] do
+    get "review", to: "neigborhoods#review"
+  end
   resources :users, only: [:index, :edit]
   resources :amenities, only: [:index]
   resources :cities, only: [:index]
