@@ -37,12 +37,7 @@ ActiveRecord::Schema.define(version: 2020_12_03_153157) do
   end
 
   create_table "amenities", force: :cascade do |t|
-    t.integer "gym"
-    t.integer "school"
-    t.integer "supermarket"
-    t.integer "hospital"
-    t.integer "restaurant"
-    t.integer "mobility"
+    t.string "name"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
