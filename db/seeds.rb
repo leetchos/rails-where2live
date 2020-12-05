@@ -1,5 +1,10 @@
 Review.destroy_all
 User.destroy_all
+Amenity.destroy_all
+Neighborhood.destroy_all
+NeighborhoodAmenity.destroy_all
+City.destroy_all
+
 # user = User.create!(email:"test@test.com", password: "123456")
 
 # name = ["Raphael Costa", "Mark Lee", "Eros Magno", "Nicolas Enne", "Raphaeros Markolas", "Alanis Morissette"]
@@ -29,27 +34,23 @@ neighborhoods = ["Vila Mariana",
                   "Bela Vista",
                   "Paraíso"]
 
-amenities = [{ school: rand(0..5) },
-            { gym: rand(0..5) },
-            { hospital: rand(0..5) },
-            { supermarket: rand(0..5) },
-            { restaurant: rand(0..5) },
-            { mobility: rand(0..5) }]
+school = Amenity.create!(name: "school")
+gym = Amenity.create!(name: "gym")
+hospital = Amenity.create!(name: "hospital")
+supermarket = Amenity.create!(name: "supermarket")
+restaurant = Amenity.create!(name: "restaurant")
+mobility = Amenity.create!(name: "mobility")
 
-
-["school","gym","hospital","supermarket","restaurant","mobility"].each do |amenity|
-  Amenity.create!(name: amenity)
-end
 
 neighborhoods.each do |neighborhood|
   n = Neighborhood.create!(name: neighborhood, city: city)
-  rand(15..20).times do
-    amenity = Amenity.all.sample
-    NeighborhoodAmenity.create!(neighborhood: n, amenity: amenity)
-    # digamos que o sample fosse {bar: 5}
-    # bairro[amenity.keys.first] = ameninty.values
-    # seria como bairro[:bar] = 5
-  end
+  n.neighborhood_amenities.create!(amenity: school, quantity: rand(3..8))
+  n.neighborhood_amenities.create!(amenity: gym, quantity: rand(3..8))
+  n.neighborhood_amenities.create!(amenity: hospital, quantity: rand(3..8))
+  n.neighborhood_amenities.create!(amenity: supermarket, quantity: rand(3..8))
+  n.neighborhood_amenities.create!(amenity: restaurant, quantity: rand(3..8))
+  n.neighborhood_amenities.create!(amenity: mobility, quantity: rand(3..8))
+
 end
 
 # puts "Cleaning database..."
