@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_12_03_153157) do
+ActiveRecord::Schema.define(version: 2020_12_05_171141) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -54,6 +54,7 @@ ActiveRecord::Schema.define(version: 2020_12_03_153157) do
     t.bigint "neighborhood_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "quantity"
     t.index ["amenity_id"], name: "index_neighborhood_amenities_on_amenity_id"
     t.index ["neighborhood_id"], name: "index_neighborhood_amenities_on_neighborhood_id"
   end
