@@ -17,9 +17,18 @@
     <%# <!-- app/views/layouts/application.html.erb -->
     <body> %>
     <%= javascript_include_tag "https://maps.googleapis.com/maps/api/js?libraries=places&key=#{ENV['GOOGLE_API_BROWSER_KEY']}" %>
-    <%= javascript_pack_tag 'application' %>
     <%# </body> %>
 
     <%= yield %>
+    <script type="text/javascript">
+      <% if params[:action] == "show" %>
+        document.querySelector(".fa-map-marker-alt").classList.add("active")
+      <% elsif params[:action] == "show" %>
+        document.querySelector(".fa-star").classList.add("active")
+      <% elsif params[:action] == "show" %>
+        document.querySelector(".fa-user").classList.add("active")
+      <% end %>
+    </script>
+
   </body>
 </html>
