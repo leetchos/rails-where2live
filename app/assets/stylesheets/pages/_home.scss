@@ -1,8 +1,4 @@
 // Specific CSS for your home-page
-.navbar-lewagon {
-  display: none;
-}
-
 .hr-1 {
   border-top: 10px solid #29ABE2;
   margin-top: 0px;
@@ -47,14 +43,16 @@ h2 {
 }
 
 .subscribe {
-  font-size: 14px;
-  font-weight: 600;
+  font-size: 16px;
+  font-weight: 500;
   color: #29ABE2;
   align-self: center;
 }
 
 .forgot-password {
   padding-top: 20px;
+  text-align: center;
+  font-weight: 500;
 }
 
 .btn-social {
@@ -74,6 +72,12 @@ h2 {
 
 .log-in-link {
   text-align: center;
+  padding: 15px 0;
+}
+
+.back-to-login {
+  text-align: center;
+  padding: 20px 0;
 }
 
 h3 {
