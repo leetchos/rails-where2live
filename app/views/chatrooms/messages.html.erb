@@ -1,4 +1,5 @@
-<h1>#<%= @chatroom.name %></h1>
+<h1>#<%= @chatroom.name %> User: <%= current_user.nickname %></h1>
+
 <div id="messages" data-chatroom-id="<%= @chatroom.id %>">
   <% @chatroom.messages.each do |message| %>
     <div class="message-container" id="message-<%= message.id %>">
@@ -10,3 +11,10 @@
     </div>
   <% end %>
 </div>
+<<<<<<< HEAD:app/views/chatrooms/show.html.erb
+
+<%= simple_form_for [ @chatroom, @message ], remote: true do |f| %>
+  <%= f.input :content, label: false, placeholder: "Message ##{@chatroom.name}" %>
+<% end %>
+=======
+>>>>>>> master:app/views/chatrooms/messages.html.erb
