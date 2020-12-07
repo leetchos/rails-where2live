@@ -1,0 +1,56 @@
+<form novalidate="novalidate" class="simple_form search" action="" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="&#x2713;" />
+  <div class="search-form-control">
+    <input class="form-control form-control-sm" type="text" placeholder="🔎  Search for city, neighborhood or street"
+        aria-label="Search">
+    <!-- <button name="button" type="submit" class="btn btn-flat"> -->
+    </button>
+  </div>
+</form>
+
+<div class="container">
+  <h1>What people say about <%= @neighborhood.name %></h1>
+
+  <hr class="hr-2 mb-4">
+
+  <ul class="list-group list-group-flush">
+    <li class="fas fa-shopping-cart list-reviews"> Market</li>
+    <li class="fas fa-stethoscope list-reviews"> Hospital</li>
+    <li class="fas fa-dumbbell list-reviews"> Gym</li>
+    <li class="fas fa-bicycle list-reviews"> Mobility</li>
+    <li class="fas fa-utensils list-reviews"> Restaurant</li>
+    <li class="fas fa-graduation-cap list-reviews"> School</li>
+  </ul>
+
+  <hr class="hr-2 mb-4">
+
+  <div class="user-reviews">
+    <img class="img-review" src="https://res.cloudinary.com/where2live/image/upload/v1607359692/where2Live/Images/Profile-Pic_n8sx09.png">
+    <p id="p">Awesome neighborhood!</p>
+  </div>
+
+  <hr class="hr-2 mb-4">
+
+  <div class="user-reviews ">
+    <img class="img-review" src="https://res.cloudinary.com/where2live/image/upload/v1607359692/where2Live/Images/Profile-Pic_n8sx09.png">
+    <p id="p">Nice views!</p>
+  </div>
+
+  <hr class="hr-2 mb-4">
+
+  <div class="user-reviews ">
+    <img class="img-review" src="https://res.cloudinary.com/where2live/image/upload/v1607359692/where2Live/Images/Profile-Pic_n8sx09.png">
+    <p id="p">Friendly places!</p>
+  </div>
+
+  <hr class="hr-2 mb-4">
+
+  <div class="user-reviews ">
+    <img class="img-review" src="https://res.cloudinary.com/where2live/image/upload/v1607359692/where2Live/Images/Profile-Pic_n8sx09.png">
+    <p id="p">Friendly places!</p>
+  </div>
+
+
+</div>
+
+<%= render 'shared/navbar' %>
+

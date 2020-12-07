@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   resources :cities, only: [:index]
   resources :chatrooms, only: [:show] do
     resources :messages, only: :create
-
+  end
+  get '/profile', to: 'pages#profile', as: :profile
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

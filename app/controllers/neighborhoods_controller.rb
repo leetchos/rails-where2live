@@ -1,6 +1,6 @@
 class NeighborhoodsController < ApplicationController
   def index
-     @neighborhoods = Neighborhood.all.to_a
+    @neighborhoods = Neighborhood.all.to_a
     amenities = params[:amenities].split(',')
 
     amenities.each do |amenity|
@@ -13,10 +13,4 @@ class NeighborhoodsController < ApplicationController
   def show
     @neighborhood = Neighborhood.find(params[:id])
   end
-
-
-  # def review
-  # neighborhood_id
-  # end
 end
-
