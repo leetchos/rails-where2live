@@ -21,12 +21,24 @@
 
     <%= yield %>
     <script type="text/javascript">
+      // alert("<%#= params[:action] %>")
       <% if params[:action] == "show" %>
-        document.querySelector(".fa-map-marker-alt").classList.add("active")
+      const iconMarker = document.querySelector(".fa-map-marker-alt")
+      if (iconMarker) {
+        iconMarker.classList.add("active")
+      }
+
+      <% elsif params[:action] == "index" %>
+      const iconStar = document.querySelector(".fa-star")
+        if (iconStar) {
+          iconStar.classList.add("active")
+        }
+
       <% elsif params[:action] == "show" %>
-        document.querySelector(".fa-star").classList.add("active")
-      <% elsif params[:action] == "show" %>
-        document.querySelector(".fa-user").classList.add("active")
+      const iconUser = document.querySelector(".fa-user")
+        if (iconUser) {
+          iconUser.classList.add("active")
+        }
       <% end %>
     </script>
 

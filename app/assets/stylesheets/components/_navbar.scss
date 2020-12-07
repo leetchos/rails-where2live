@@ -6,6 +6,7 @@
   width: 100%;
   height: 9%;
   border-top: 1px solid #e3e3e3;
+  z-index: 100;
 }
 
 // .navbar-lewagon .navbar-collapse {
@@ -14,11 +15,12 @@
 
 .navbar-icon {
   color: #a5a5a5;
+  z-index:150;
 }
 
-// .navbar-icon:hover {
-//   color: #29ABE2;
-// }
+.navbar-icon:hover {
+  color: #29ABE2;
+}
 
 .navbar-icon.active {
   color: #29ABE2;
