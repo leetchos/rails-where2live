@@ -1,8 +1,10 @@
 <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/background.png);">
     <div class="container">
-      <h1>Escrever o codigo para puxar nome do usuario</h1>
-      <p>Escrever codigo para localizaççao do usuario</p>
-      <%= cl_image_tag current_user.photo, class: "avatar" %>
+      <h1>   <%= current_user.name if current_user.name%> Escrever o codigo para puxar nome do usuario </h1>       
+      <p> <%= current_user.city if current_user.city %> Escrever codigo para localizaççao do usuario </p>       
+      <%= cl_image_tag current_user.photo.key, class: "avatar"  if current_user.photo.attached?%>
+      
+
     </div>
 </div>
 <div class="text-center">
@@ -16,13 +18,13 @@
     <h1> where2live </h1>
     <!-- <p> make your choice better to live </p> -->
     <!-- <div class = "">
-        <div class="row"> <p> you have 0 messages </p> </div>
+        <div class="row"> <p> you have 0 Replies </p> </div>
         <div class="row">Edit profile</div>
         <div class="row">configuration</div>
         <div class="row">Sign out</div>
     </div> -->
     <%= link_to root_path, class: "btn btn-ghost border-bottom" do %>
-      <i class="far fa-comment-alt"></i> You have 0 messages
+      <i class="far fa-comment-alt"></i> You have 0 Replies
      <% end %> 
      <%= link_to root_path, class: "btn btn-ghost border-bottom" do %>
       <i class="fas fa-pencil-alt"></i>  Edit profile
