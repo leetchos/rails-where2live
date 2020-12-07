@@ -5,7 +5,6 @@ class NeighborhoodsController < ApplicationController
 
     amenities.each do |amenity|
       ameni = Amenity.find_by(name: amenity)
-      byebug
       neigh_ids = ameni.neighborhood_amenities.where('quantity >= 5').pluck(:neighborhood_id)
       @neighborhoods.select! { |neighborhood| neigh_ids.include?(neighborhood.id) }
     end
