@@ -1,7 +1,7 @@
 <hr class="hr-1">
 <div class="container">
   <img class="logo" src="https://res.cloudinary.com/where2live/image/upload/v1606838131/where2Live/Assets/where2live-logo_tklfqh.svg">
-  <h1>Faça seu login!</h1>
+  <h1>Login now!</h1>
 
   <hr class="hr-2 mb-4">
 
@@ -22,7 +22,7 @@
     </div>
   <% end %>
 
-  <%= link_to "Esqueceu sua senha?", new_password_path(resource_name), class: 'forgot-password' %><br />
+  <%= link_to "Forgot your password?", new_password_path(resource_name), class: 'forgot-password' %><br />
 
   <hr class="hr-2 mb-4">
 
@@ -30,8 +30,8 @@
   <button type="submit" class="btn-social"><i class="fab fa-google"></i> Google</button>
 
   <div class="sign-up">
-    <h3>Não tem uma conta ainda?</h3>
-    <%= link_to "Inscreva-se", new_registration_path(resource_name), class: 'subscribe' %><br />
+    <h3>Don't have an account yet?</h3>
+    <%= link_to "Sign In", new_registration_path(resource_name), class: 'subscribe' %><br />
   </div>
 
 </div>
