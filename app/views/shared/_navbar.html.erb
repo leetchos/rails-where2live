@@ -1,7 +1,13 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
 
+  <%= link_to amenities_path do %>
   <i class="navbar-icon fas fa-map-marker-alt"></i>
+  <% end  %>
+  <%= link_to neighborhood_reviews_path(@neighborhood) do %>
   <i class="navbar-icon far fa-star"></i>
+  <% end  %>
+  <%= link_to profile_path do %>
   <i class="navbar-icon far fa-user"></i>
+  <% end  %>
 
 </div>
