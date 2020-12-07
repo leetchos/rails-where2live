@@ -1,26 +1,28 @@
 <hr class="hr-1">
 <div class="container">
   <img class="logo" src="https://res.cloudinary.com/where2live/image/upload/v1606838131/where2Live/Assets/where2live-logo_tklfqh.svg">
-  <h1>Quase lá! Só falta <br> escolher o bairro <i class="far fa-smile"></i></h1>
+  <h1>Almost there! Now select your neighborhood <i class="far fa-smile"></i></h1>
 
   <hr class="hr-2 mb-4">
 
   <form>
     <div class="form-group">
-      <label for="exampleInputEmail1">Selecione seu bairro</label>
-      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="ex: Vila Madalena">
+      <label for="exampleInputEmail1">Select your new neighborhood </label>
     </div>
 
-    <% @neighborhoods.each do |neighborhood| %>
-    <ul>
-    <li>
-      <%= link_to neighborhood.name, neighborhood_path(neighborhood) %>
-    </li>
+  <table class="table">
+    <tbody>
+        <% @neighborhoods.each do |neighborhood| %>
+        <tr>
+          <td>
+            <%= link_to neighborhood.name, neighborhood_path(neighborhood) %>
+          </td>
+        <% end %>
+      </tr>
+    </tbody>
+  </table>
 
-    </ul>
-    <% end %>
-
-  <button type="submit" class="btn btn-primary w-100" id="btn-amenities">Achar meu novo lar!</button>
+  <button type="submit" class="btn btn-primary w-100" id="btn-amenities">Find my new home!</button>
 
 </div>
 
