@@ -15,7 +15,6 @@ class NeighborhoodsController < ApplicationController
 
   def show
     @neighborhood = Neighborhood.find(params[:id])
-    # @showresult = ENV["GOOGLE_API_SERVER_KEY"]
   end
 end
 
