@@ -2,8 +2,7 @@
   <div class="search-form-control">
     <input class="form-control form-control-sm" type="text" placeholder="🔎  Search for city, neighborhood or street"
         aria-label="Search">
-    <!-- <button name="button" type="submit" class="btn btn-flat"> -->
-    </button>
+    <!-- <button name="button" type="submit" class="btn btn-flat"> </button> -->
   </div>
 </form>
 
@@ -17,7 +16,7 @@
   width="100%"
   height="100%"
   frameborder="0" style="border:0"
-  src="https://www.google.com/maps/embed/v1/search?key=<%= ENV["GOOGLE_API_SERVER_KEY"] %>&q=<%=@neighborhood.name%>" allowfullscreen=""
+  src="https://www.google.com/maps/embed/v1/search?key=<%= ENV["GOOGLE_API_SERVER_KEY"] %>&q=<%=@neighborhood.name%>+sao+paulo" allowfullscreen=""
   aria-hidden="false" tabindex="0">
 </iframe>
 
