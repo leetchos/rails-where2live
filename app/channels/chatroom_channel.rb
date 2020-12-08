@@ -4,8 +4,7 @@ class ChatroomChannel < ApplicationCable::Channel
     stream_for chatroom
     # stream_from "some_channel"
   end
-
-  def unsubscribed
-    # Any cleanup needed when channel is unsubscribed
-  end
+  # def unsubscribed
+  #   # Any cleanup needed when channel is unsubscribed
+  # end
 end
