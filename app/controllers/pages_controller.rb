@@ -5,5 +5,7 @@ class PagesController < ApplicationController
   end
 
   def profile
+    @neighborhood = Neighborhood.find(params[:id])
+
   end
 end
