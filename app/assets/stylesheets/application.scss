@@ -9,6 +9,11 @@
 @import "font-awesome";
 
 // Your CSS partials
+@import "components/index";
+@import "pages/index";
+@import "pages/map";
+@import "pages/reviews";
+@import "pages/desktop";
 
 body {
   height: 100%;
