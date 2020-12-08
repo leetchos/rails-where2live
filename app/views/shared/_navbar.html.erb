@@ -1,12 +1,12 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
 
-  <%= link_to amenities_path do %>
+  <%= link_to neighborhoods_path do %>
   <i class="navbar-icon fas fa-arrow-left"></i>
   <% end  %>
-  <%= link_to amenities_path do %>
+  <%= link_to neighborhood_path(current_user.neighborhood) do %>
   <i class="navbar-icon fas fa-map-marker-alt"></i>
   <% end  %>
-  <%= link_to neighborhood_reviews_path(@neighborhood) do %>
+  <%= link_to neighborhood_reviews_path(current_user.neighborhood) do %>
   <i class="navbar-icon fas fa-star"></i>
   <% end  %>
   <%= link_to profile_path do %>
