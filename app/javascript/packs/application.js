@@ -28,11 +28,14 @@ import { initClick, clickableAmenity } from '../plugins/init_clickable';
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
 
+import { initChatroomCable } from '../channels/chatroom_channel'
+
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   // initSelect2();
   initClick();
   clickableAmenity();
+  initChatroomCable();
 });
 
 // Wrap every letter in a span
