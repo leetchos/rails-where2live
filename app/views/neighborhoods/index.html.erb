@@ -20,7 +20,7 @@
         <% @neighborhoods.each do |neighborhood| %>
         <tr>
           <td>
-            <%= link_to neighborhood.name, neighborhood_path(neighborhood) %>
+            <%= link_to neighborhood.name, neighborhood_path(neighborhood, amenities:  params[:amenities])  %>
           </td>
         <% end %>
       </tr>
