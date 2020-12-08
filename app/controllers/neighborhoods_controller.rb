@@ -16,6 +16,7 @@ class NeighborhoodsController < ApplicationController
 
   def chat
     @neighborhood = Neighborhood.find(params[:id])
+    @message = Message.new
   end
 
 end
