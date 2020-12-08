@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_12_07_155003) do
+ActiveRecord::Schema.define(version: 2020_12_08_174813) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -98,6 +98,15 @@ ActiveRecord::Schema.define(version: 2020_12_07_155003) do
     t.index ["user_id"], name: "index_reviews_on_user_id"
   end
 
+  create_table "user_amenities", force: :cascade do |t|
+    t.bigint "user_id"
+    t.bigint "amenity_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["amenity_id"], name: "index_user_amenities_on_amenity_id"
+    t.index ["user_id"], name: "index_user_amenities_on_user_id"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -108,7 +117,9 @@ ActiveRecord::Schema.define(version: 2020_12_07_155003) do
     t.datetime "updated_at", precision: 6, null: false
     t.string "name"
     t.string "city"
+    t.bigint "neighborhood_id"
     t.index ["email"], name: "index_users_on_email", unique: true
+    t.index ["neighborhood_id"], name: "index_users_on_neighborhood_id"
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
@@ -120,4 +131,7 @@ ActiveRecord::Schema.define(version: 2020_12_07_155003) do
   add_foreign_key "neighborhoods", "cities"
   add_foreign_key "reviews", "neighborhoods"
   add_foreign_key "reviews", "users"
+  add_foreign_key "user_amenities", "amenities"
+  add_foreign_key "user_amenities", "users"
+  add_foreign_key "users", "neighborhoods"
 end
