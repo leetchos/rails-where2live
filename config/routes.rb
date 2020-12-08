@@ -3,8 +3,8 @@ Rails.application.routes.draw do
   root to: 'cities#index'
   resources :neighborhoods, only: [:index, :show] do
     resources :reviews, only: [:index, :create]
-    get '/chatroom', to: 'chatrooms#messages'
     resources :messages, only: :create
+    get 'chat', on: :member
   end
   resources :users, only: [:index, :edit]
   resources :amenities, only: [:index]

@@ -13,4 +13,9 @@ class NeighborhoodsController < ApplicationController
   def show
     @neighborhood = Neighborhood.find(params[:id])
   end
+
+  def chat
+    @neighborhood = Neighborhood.find(params[:id])
+  end
+
 end
