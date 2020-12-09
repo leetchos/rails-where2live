@@ -33,5 +33,4 @@ class NeighborhoodsController < ApplicationController
     @neighborhood = Neighborhood.find(params[:id])
     @message = Message.new
   end
-
 end
