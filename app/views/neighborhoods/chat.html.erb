@@ -6,6 +6,7 @@
   <% end  %>
 
 <h1><%= @neighborhood.name %></h1>
+  <hr class="hr-2 mb-4">
 
 <div id="messages" data-neighborhood-id="<%= @neighborhood.id if @neighborhood.id %>">
   <% @neighborhood.messages.each do |message| %>
@@ -21,7 +22,7 @@
 </div>
 
 <%= simple_form_for [ @neighborhood, @message ], remote: true do |f| %>
-  <%= f.input :content, label: false, placeholder: "Message ##{@neighborhood.name}" %>
+  <%= f.input :content, label: false, placeholder: "Write your message here" %>
 <% end %>
 </div>
 
