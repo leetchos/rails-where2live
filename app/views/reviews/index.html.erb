@@ -16,7 +16,10 @@
   <hr class="hr-2 mb-4">
 
   <ul class="list-group list-group-flush">
-    <li class="far fa-comment-alt list-chat"> Join the chat now!</li>
+    <%= link_to chat_neighborhood_path(@neighborhood) do %>
+  <li class="far fa-comment-alt list-chat"> Join the chat now!</li>
+  <% end  %>
+
   </ul>
 
   <hr class="hr-2 mb-4">
@@ -24,4 +27,3 @@
 </div>
 
 <%= render 'shared/navbar' %>
-
