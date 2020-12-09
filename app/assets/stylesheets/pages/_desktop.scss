@@ -1,14 +1,19 @@
+// Navbar
+
 .navbar-lewagon-home {
   background: white;
   border-bottom: 1px solid #e3e3e3;
   box-shadow: 0 2px 2px rgba(0,0,0,0.05);
 }
+
 .navbar-lewagon-home .navbar-collapse {
   flex-grow: 0;
 }
+
 .navbar-lewagon-home .navbar-brand img {
   width: 50%;
 }
+
 .slogan-home {
   font-weight: 500;
   font-size: 14px;
@@ -17,17 +22,23 @@
   margin-bottom: 0 !important;
   margin-top: 0.5rem !important;
 }
+
+
 // Main Banner
+
+
 .banner {
   background-size: cover;
   background-position: center;
   padding: 200px 0 440px 0;
 }
+
 .banner-container {
   display: flex;
   flex-direction: column;
   padding: 0 300px;
 }
+
 .ml12 {
   font-weight: 500;
   font-size: 40px;
@@ -35,10 +46,12 @@
   color: #fff;
   text-align: left;
 }
+
 .ml12 .letter {
   display: inline-block;
   line-height: 1em;
 }
+
 .btn-ghost {
   color: white;
   border: 1px solid white;
@@ -49,19 +62,26 @@
   width: 300px;
   margin-top: 30px;
 }
+
 .btn-ghost:hover {
   opacity: 1;
   background-color: white;
   color: black;
 }
+
+
 // App Download Section
+
+
 .app-container {
    margin: 100px 300px 0 300px;
 }
+
 .grid-app {
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
+
 .title-download {
   font-family: 'Poppins', sans-serif;
   font-weight: 600;
@@ -69,25 +89,34 @@
   letter-spacing: 0.1em;
   color: #29ABE2;
 }
+
 .store-btn {
   width: 250px;
   padding: 15px 0;
 }
+
 .phone-mockup {
   height: 400px;
 }
+
+
 // Who We Are
+
+
 .background-section {
   background-color: #fafafa;
 }
+
 .who-container {
    margin: 0 300px 0 300px;
 }
+
 .grid-who {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 40px;
 }
+
 .card {
   margin: 100px 0;
   padding: 50px 0;
@@ -102,32 +131,44 @@
   border-radius: 2px;
   font-family: 'Poppins', sans-serif;
 }
+
 .who-icon {
   height: 50px;
 }
+
 .who-title {
   font-size: 20px;
   padding: 20px 0 10px 0;
   color: #505050;
 }
+
 .who-content {
   text-align: center;
   padding: 0 50px;
   color: #a5a5a5;
   font-size: 12px;
 }
+
+
 // City Image
+
+
 .city-img {
   width: 100%;
   position: relative;
 }
+
 .city-logo {
   height: 120px;
   position: absolute;
   z-index: 10;
   margin: 280px 550px;
 }
+
+
 // Footer
+
+
 .footer {
   background: #f4f4f4;
   display: flex;
@@ -137,19 +178,23 @@
   padding: 0px 50px;
   color: rgba(0,0,0,0.3);
 }
+
 .footer-links {
   display: flex;
   align-items: center;
 }
+
 .footer-links a {
   color: #4d789e;
   text-decoration: none;
   font-size: 24px;
   padding: 0px 10px;
 }
+
 .footer-links a:hover {
   color: #284054;
 }
+
 .footer .fa-heart {
   color: #D23333;
 }

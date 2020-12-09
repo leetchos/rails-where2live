@@ -10,7 +10,7 @@ class MessagesController < ApplicationController
         @chatroom,
         render_to_string(partial: "message", locals: { message: @message })
       )
-      redirect_to  chat_neighborhood_path(@neighborhood, anchor: "message-#{@message.id}")
+      redirect_to chat_neighborhood_path(@neighborhood, anchor: "message-#{@message.id}")
     else
       render "neighborhoods/show"
     end
