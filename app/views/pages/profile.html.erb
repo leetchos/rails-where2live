@@ -9,23 +9,23 @@
 
   <div class= "wls">
     <div class="container-btn">
-      <%= link_to root_path, class: "btn btn-ghost-profile border-bottom" do %>
+      <%= link_to "", class: "btn btn-ghost-profile border-bottom" do %>
       <i class="far fa-comment-alt"></i> You have 0 Replies
-      <% end %> 
-      <%= link_to root_path, class: "btn btn-ghost-profile border-bottom" do %>
+      <% end %>
+      <%= link_to "", class: "btn btn-ghost-profile border-bottom" do %>
       <i class="fas fa-pencil-alt"></i>  Edit profile
       <% end %>
-      <%= link_to root_path, class: "btn btn-ghost-profile border-bottom" do %>
+      <%= link_to "", class: "btn btn-ghost-profile border-bottom" do %>
       <i class="far fa-star"></i> Add your review
       <% end %>
-      <%= link_to root_path, class: "btn btn-ghost-profile border-bottom" do %>
+      <%= link_to "", class: "btn btn-ghost-profile border-bottom" do %>
       <i class="fas fa-wrench"></i> Configuration
       <% end %>
-      <%= link_to root_path, class: "btn btn-ghost-profile border-bottom" do %>
+      <%= link_to destroy_user_session_path, method: :delete, class: "btn btn-ghost-profile border-bottom" do %>
       <i class="fas fa-sign-out-alt"></i> Sign out
       <% end %>
     </div>
   </div>
-    
+
 </div>
 <%= render 'shared/navbar' %>
