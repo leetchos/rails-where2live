@@ -1,4 +1,4 @@
-<h1>#<%= @neighborhood.name %> User: <%= current_user.name if current_user.name %></h1>
+<h1><%= @neighborhood.name %> </h1>
 
 <div id="messages" data-neighborhood-id="<%= @neighborhood.id if @neighborhood.id %>">
   <% @neighborhood.messages.each do |message| %>

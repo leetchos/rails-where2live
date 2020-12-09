@@ -1,8 +1,9 @@
 Review.destroy_all
-User.destroy_all
+UserAmenity.destroy_all
 Amenity.destroy_all
-Neighborhood.destroy_all
 NeighborhoodAmenity.destroy_all
+User.destroy_all
+Neighborhood.destroy_all
 City.destroy_all
 
 # user = User.create!(email:"test@test.com", password: "123456")
@@ -72,7 +73,7 @@ neighborhoods = ["Vila Mariana",
                   "Vila Guilherme",
                   "Vila Medeiros",
                   "Vila jaguari",
-                  "Tamboré",                 
+                  "Tamboré",
                   "Bom Retiro",
                   "Sé Bela Vista",
                   "Cambuci",
