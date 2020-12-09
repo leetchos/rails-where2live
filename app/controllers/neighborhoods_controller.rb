@@ -28,4 +28,10 @@ class NeighborhoodsController < ApplicationController
       UserAmenity.create(user_id: current_user.id, amenity_id: ameni.id)
     end
   end
+
+  def chat
+    @neighborhood = Neighborhood.find(params[:id])
+    @message = Message.new
+  end
+
 end

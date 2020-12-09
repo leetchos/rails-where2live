@@ -14,3 +14,8 @@
 @import "pages/map";
 @import "pages/reviews";
 @import "pages/desktop";
+
+body {
+  height: 100%;
+  margin: 0 auto;
+}
