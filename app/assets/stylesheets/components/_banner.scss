@@ -1,12 +1,11 @@
 .banner-profile {
-  background-image: url(https://www.htmlcsscolor.com/preview/gallery/29ABE2.png);
+  background-image: url(https://res.cloudinary.com/where2live/image/upload/v1607364446/where2Live/Assets/Ellipse_4_vvrs2k.png);
   background-size: cover;
   background-position: center;
   padding: 150px 0;
   height: 300px;
   width: 100%;
   margin-right: 0 !important;
-  border-radius: 300px/100px;
   top: -70px;
   position: relative;
 }
@@ -14,9 +13,8 @@
 .banner-profile h1 {
   margin: 0;
   color: white;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-  font-size: 32px;
-  font-weight: bold;
+  font-size: 30px;
+  font-weight: 600;
 }
 
 .banner-profile p {
@@ -28,6 +26,12 @@
 .users-pictures {
   width: 56px;
   border-radius: 50%;
+}
+
+.pin-profile {
+  color: #fff;
+  padding-right: 2px;
+  font-size: 18px;
 }
 
 .wls {
