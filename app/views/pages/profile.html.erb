@@ -2,7 +2,7 @@
   <div class="banner-profile" >
     <div class="container text-center">
       <h1><%= current_user.name if current_user.name%></h1>
-      <p><i class="navbar-icon pin-profile fas fa-map-marker-alt"></i> <%= current_user.city if current_user.city %></p>
+      <p><%= current_user.city if current_user.city %></p>
       <%= cl_image_tag current_user.photo.key, class: "avatar"  if current_user.photo.attached?%>
     </div>
   </div>
