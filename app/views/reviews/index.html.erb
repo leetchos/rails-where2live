@@ -5,18 +5,21 @@
   <hr class="hr-2 mb-4">
 
   <ul class="list-group list-group-flush">
-    <li class="fas fa-shopping-cart list-reviews"> Market</li>
-    <li class="fas fa-stethoscope list-reviews"> Hospital</li>
-    <li class="fas fa-dumbbell list-reviews"> Gym</li>
-    <li class="fas fa-bicycle list-reviews"> Mobility</li>
-    <li class="fas fa-utensils list-reviews"> Restaurant</li>
-    <li class="fas fa-graduation-cap list-reviews"> School</li>
+    <li class="fas fa-shopping-cart icon-reviews"><span class="list-reviews"> Market</span></li>
+    <li class="fas fa-stethoscope icon-reviews"><span class="list-reviews"> Hospital</span></li>
+    <li class="fas fa-dumbbell icon-reviews"><span class="list-reviews"> Gym</span></li>
+    <li class="fas fa-bicycle icon-reviews"><span class="list-reviews"> Mobility</span></li>
+    <li class="fas fa-utensils icon-reviews"><span class="list-reviews"> Restaurant</span></li>
+    <li class="fas fa-graduation-cap icon-reviews"><span class="list-reviews"> School</span></li>
   </ul>
 
   <hr class="hr-2 mb-4">
 
   <ul class="list-group list-group-flush">
-    <li class="far fa-comment-alt list-chat"> Join the chat now!</li>
+    <%= link_to chat_neighborhood_path(@neighborhood) do %>
+  <li class="far fa-comment-alt list-chat"><span class="list-message"> Join the chat now!</span></li>
+  <% end  %>
+
   </ul>
 
   <hr class="hr-2 mb-4">
@@ -24,4 +27,3 @@
 </div>
 
 <%= render 'shared/navbar' %>
-
