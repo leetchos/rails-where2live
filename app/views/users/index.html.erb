@@ -1,13 +1,12 @@
 <div class="banner">
     <div class="container-users" >
-    <%= current_user.name if current_user.name%>       
-    <%= current_user.city if current_user.city %>     
+    <%= current_user.name if current_user.name%>
+    <%= current_user.city if current_user.city %>
     <%= cl_image_tag current_user.photo.key, class: "avatar"  if current_user.photo.attached?%>
 <img src="https://res.cloudinary.com/where2live/image/upload/v1607364446/where2Live/Assets/Ellipse_4_vvrs2k.png"> 
 <div class="text-center">
 <h2> <img class="users.pictures" alt="users.pictures" src= /> </h2>
 </div>
-
 
 </div>
 </div>
