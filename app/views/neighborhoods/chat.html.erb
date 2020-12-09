@@ -1,4 +1,11 @@
-<h1>#<%= @neighborhood.name %> User: <%= current_user.name if current_user.name %></h1>
+<hr class="hr-1">
+<div class="container">
+
+  <%= link_to neighborhood_reviews_path(current_user.neighborhood) do %>
+  <i class="fas fa-arrow-left back-arrow"></i>
+  <% end  %>
+
+<h1><%= @neighborhood.name %></h1>
 
 <div id="messages" data-neighborhood-id="<%= @neighborhood.id if @neighborhood.id %>">
   <% @neighborhood.messages.each do |message| %>
@@ -8,6 +15,7 @@
         <small><%= message.created_at.strftime("%a %b %e at %l:%M%p") %></small>
       </i>
       <p><%= message.content %></p>
+      <hr class="hr-2 mb-4">
     </div>
   <% end %>
 </div>
@@ -15,4 +23,5 @@
 <%= simple_form_for [ @neighborhood, @message ], remote: true do |f| %>
   <%= f.input :content, label: false, placeholder: "Message ##{@neighborhood.name}" %>
 <% end %>
+</div>
 
